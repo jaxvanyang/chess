@@ -1,0 +1,13 @@
+{
+  "itemGroup.chess": "Example Mod Tab",
+  "block.chess.example_block": "Example Block",
+  "item.chess.example_item": "Example Item",
+
+  "chess.configuration.title": "Chess Configs",
+  "chess.configuration.section.chess.common.toml": "Chess Configs",
+  "chess.configuration.section.chess.common.toml.title": "Chess Configs",
+  "chess.configuration.items": "Item List",
+  "chess.configuration.logDirtBlock": "Log Dirt Block",
+  "chess.configuration.magicNumberIntroduction": "Magic Number Text",
+  "chess.configuration.magicNumber": "Magic Number"
+}
