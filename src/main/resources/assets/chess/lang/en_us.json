@@ -1,7 +1,11 @@
 {
-  "itemGroup.chess": "Example Mod Tab",
-  "block.chess.example_block": "Example Block",
-  "item.chess.example_item": "Example Item",
+  "itemGroup.chess": "Chess",
+  "block.chess.bishop": "Bishop",
+  "block.chess.king": "King",
+  "block.chess.knight": "Knight",
+  "block.chess.pawn": "Pawn",
+  "block.chess.queen": "Queen",
+  "block.chess.rook": "Rook",
 
   "chess.configuration.title": "Chess Configs",
   "chess.configuration.section.chess.common.toml": "Chess Configs",

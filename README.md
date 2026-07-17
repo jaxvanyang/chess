@@ -1,6 +1,4 @@
-
-Installation information
-=======
+## Installation information
 
 This template repository can be directly cloned to get you started with a new
 mod. Simply create a new repository cloned from this one, by following the
@@ -12,14 +10,15 @@ If at any point you are missing libraries in your IDE, or you've run into proble
 run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
 {this does not affect your code} and then start the process again.
 
-Mapping Names:
-============
+## Mapping Names
+
 By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
 in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
 license. For the latest license text, refer to the mapping file itself, or the reference copy here:
 https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## References
+
+- [Linkie](https://linkie.shedaniel.dev/)
+- [NeoForged docs](https://docs.neoforged.net/docs/gettingstarted/)
+- [Low-poly Chess pieces by PhantomEye](https://sketchfab.com/3d-models/low-poly-chess-pieces-2ca0f15ebc544be8a22d4d106ac727ab)
