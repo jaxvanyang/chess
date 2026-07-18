@@ -5,13 +5,5 @@
   "block.chess.knight": "Knight",
   "block.chess.pawn": "Pawn",
   "block.chess.queen": "Queen",
-  "block.chess.rook": "Rook",
-
-  "chess.configuration.title": "Chess Configs",
-  "chess.configuration.section.chess.common.toml": "Chess Configs",
-  "chess.configuration.section.chess.common.toml.title": "Chess Configs",
-  "chess.configuration.items": "Item List",
-  "chess.configuration.logDirtBlock": "Log Dirt Block",
-  "chess.configuration.magicNumberIntroduction": "Magic Number Text",
-  "chess.configuration.magicNumber": "Magic Number"
+  "block.chess.rook": "Rook"
 }
