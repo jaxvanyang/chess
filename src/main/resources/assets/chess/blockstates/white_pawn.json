@@ -1,7 +1,7 @@
 {
     "variants": {
             "": {
-                "model": "chess:block/pawn"
+                "model": "chess:block/white_pawn"
             }
     }
 }

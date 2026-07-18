@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "": {
+      "model": "chess:block/white_bishop"
+    },
+    "facing=south": {
+      "model": "chess:block/white_bishop",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "chess:block/white_bishop",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "chess:block/white_bishop",
+      "y": 90
+    }
+  }
+}

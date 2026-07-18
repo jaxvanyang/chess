@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "chess:item/queen"
+    "model": "chess:item/white_queen"
   }
 }

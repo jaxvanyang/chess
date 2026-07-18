@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "chess:item/rook"
+    "model": "chess:item/white_rook"
   }
 }

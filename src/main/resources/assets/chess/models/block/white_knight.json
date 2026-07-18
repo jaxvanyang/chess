@@ -3,10 +3,10 @@
 	"credit": "Made with Blockbench",
 	"parent": "chess:block/chess_piece",
 	"textures": {
-		"6": "chess:block/quartz_block_bottom",
-		"7": "chess:block/quartz_block_side",
-		"8": "chess:block/quartz_block_top",
-		"particle": "chess:block/quartz_block_bottom"
+		"6": "chess:block/white_piece_bottom",
+		"7": "chess:block/white_piece_side",
+		"8": "chess:block/white_piece_top",
+		"particle": "chess:block/white_piece_bottom"
 	},
 	"elements": [
 		{

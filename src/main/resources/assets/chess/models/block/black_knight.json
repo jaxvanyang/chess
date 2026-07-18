@@ -1,7 +1,7 @@
 {
 	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
-	"parent": "chess:block/knight",
+	"parent": "chess:block/white_knight",
 	"textures": {
 		"6": "chess:block/black_piece_bottom",
 		"7": "chess:block/black_piece_side",

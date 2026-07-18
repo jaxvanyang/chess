@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "": {
+      "model": "chess:block/white_knight"
+    },
+    "facing=south": {
+      "model": "chess:block/white_knight",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "chess:block/white_knight",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "chess:block/white_knight",
+      "y": 90
+    }
+  }
+}

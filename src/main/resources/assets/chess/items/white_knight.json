@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "chess:item/knight"
+    "model": "chess:item/white_knight"
   }
 }

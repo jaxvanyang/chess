@@ -5,25 +5,19 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -44,18 +38,18 @@ public class Chess {
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "chess" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    public static final DeferredBlock<Block> BISHOP = BLOCKS.registerBlock("bishop", Bishop::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
-    public static final DeferredBlock<Block> KING = BLOCKS.registerBlock("king", King::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
-    public static final DeferredBlock<Block> KNIGHT = BLOCKS.registerBlock("knight", Knight::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
-    public static final DeferredBlock<Block> PAWN = BLOCKS.registerBlock("pawn", Pawn::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
-    public static final DeferredBlock<Block> QUEEN = BLOCKS.registerBlock("queen", Queen::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
-    public static final DeferredBlock<Block> ROOK = BLOCKS.registerBlock("rook", Rook::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
-    public static final DeferredItem<BlockItem> BISHOP_ITEM = ITEMS.registerSimpleBlockItem("bishop", BISHOP);
-    public static final DeferredItem<BlockItem> KING_ITEM = ITEMS.registerSimpleBlockItem("king", KING);
-    public static final DeferredItem<BlockItem> KNIGHT_ITEM = ITEMS.registerSimpleBlockItem("knight", KNIGHT);
-    public static final DeferredItem<BlockItem> PAWN_ITEM = ITEMS.registerSimpleBlockItem("pawn", PAWN);
-    public static final DeferredItem<BlockItem> QUEEN_ITEM = ITEMS.registerSimpleBlockItem("queen", QUEEN);
-    public static final DeferredItem<BlockItem> ROOK_ITEM = ITEMS.registerSimpleBlockItem("rook", ROOK);
+    public static final DeferredBlock<Block> WHITE_BISHOP = BLOCKS.registerBlock("white_bishop", Bishop::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> WHITE_KING = BLOCKS.registerBlock("white_king", King::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> WHITE_KNIGHT = BLOCKS.registerBlock("white_knight", Knight::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> WHITE_PAWN = BLOCKS.registerBlock("white_pawn", Pawn::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> WHITE_QUEEN = BLOCKS.registerBlock("white_queen", Queen::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> WHITE_ROOK = BLOCKS.registerBlock("white_rook", Rook::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
+    public static final DeferredItem<BlockItem> WHITE_BISHOP_ITEM = ITEMS.registerSimpleBlockItem("white_bishop", WHITE_BISHOP);
+    public static final DeferredItem<BlockItem> WHITE_KING_ITEM = ITEMS.registerSimpleBlockItem("white_king", WHITE_KING);
+    public static final DeferredItem<BlockItem> WHITE_KNIGHT_ITEM = ITEMS.registerSimpleBlockItem("white_knight", WHITE_KNIGHT);
+    public static final DeferredItem<BlockItem> WHITE_PAWN_ITEM = ITEMS.registerSimpleBlockItem("white_pawn", WHITE_PAWN);
+    public static final DeferredItem<BlockItem> WHITE_QUEEN_ITEM = ITEMS.registerSimpleBlockItem("white_queen", WHITE_QUEEN);
+    public static final DeferredItem<BlockItem> WHITE_ROOK_ITEM = ITEMS.registerSimpleBlockItem("white_rook", WHITE_ROOK);
 
     public static final DeferredBlock<Block> BLACK_BISHOP = BLOCKS.registerBlock("black_bishop", Bishop::new, p -> p.mapColor(MapColor.COLOR_BLACK).strength(1.5F, 6F).requiresCorrectToolForDrops());
     public static final DeferredBlock<Block> BLACK_KING = BLOCKS.registerBlock("black_king", King::new, p -> p.mapColor(MapColor.COLOR_BLACK).strength(1.5F, 6F).requiresCorrectToolForDrops());
@@ -72,14 +66,14 @@ public class Chess {
 
     // Creates a creative tab with the id "chess:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("chess_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.chess")) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> PAWN_ITEM.get().getDefaultInstance()).displayItems((parameters, output) -> {
+            .withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> WHITE_PAWN_ITEM.get().getDefaultInstance()).displayItems((parameters, output) -> {
                 // sort by piece value
-                output.accept(PAWN_ITEM.get());
-                output.accept(KNIGHT_ITEM.get());
-                output.accept(BISHOP_ITEM.get());
-                output.accept(ROOK_ITEM.get());
-                output.accept(QUEEN_ITEM.get());
-                output.accept(KING_ITEM.get());
+                output.accept(WHITE_PAWN_ITEM.get());
+                output.accept(WHITE_KNIGHT_ITEM.get());
+                output.accept(WHITE_BISHOP_ITEM.get());
+                output.accept(WHITE_ROOK_ITEM.get());
+                output.accept(WHITE_QUEEN_ITEM.get());
+                output.accept(WHITE_KING_ITEM.get());
                 output.accept(BLACK_PAWN_ITEM.get());
                 output.accept(BLACK_KNIGHT_ITEM.get());
                 output.accept(BLACK_BISHOP_ITEM.get());

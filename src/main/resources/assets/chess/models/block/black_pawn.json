@@ -1,7 +1,7 @@
 {
 	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
-	"parent": "chess:block/pawn",
+	"parent": "chess:block/white_pawn",
 	"textures": {
 		"0": "chess:block/black_piece_bottom",
 		"1": "chess:block/black_piece_side",

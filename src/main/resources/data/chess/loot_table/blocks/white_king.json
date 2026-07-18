@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "chess:pawn"
+          "name": "chess:white_king"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "chess:blocks/pawn"
+  "random_sequence": "chess:blocks/king"
 }

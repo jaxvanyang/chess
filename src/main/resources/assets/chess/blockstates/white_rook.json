@@ -1,7 +1,7 @@
 {
     "variants": {
             "": {
-                "model": "chess:block/queen"
+                "model": "chess:block/white_rook"
             }
     }
 }
