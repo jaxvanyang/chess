@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import org.jspecify.annotations.Nullable;
 
-public class DirectionBlock extends Block {
+public class DirectionBlock extends GrabBlock {
     public static final EnumProperty<Direction> FACING = BlockStateProperties.FACING;
 
     public DirectionBlock(Properties properties) {

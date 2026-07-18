@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class Rook extends Block {
+public class Rook extends GrabBlock {
     private static final VoxelShape SHAPE = Block.box(3, 0, 3, 13, 18, 13);
 
     public Rook(Properties properties) {
