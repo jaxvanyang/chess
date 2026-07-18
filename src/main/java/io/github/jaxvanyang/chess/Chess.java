@@ -44,12 +44,12 @@ public class Chess {
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "chess" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    public static final DeferredBlock<Block> BISHOP = BLOCKS.registerBlock("bishop", Bishop::new, p -> p.mapColor(MapColor.STONE));
-    public static final DeferredBlock<Block> KING = BLOCKS.registerBlock("king", King::new, p -> p.mapColor(MapColor.STONE));
-    public static final DeferredBlock<Block> KNIGHT = BLOCKS.registerBlock("knight", Knight::new, p -> p.mapColor(MapColor.STONE));
-    public static final DeferredBlock<Block> PAWN = BLOCKS.registerBlock("pawn", Pawn::new, p -> p.mapColor(MapColor.STONE));
-    public static final DeferredBlock<Block> QUEEN = BLOCKS.registerBlock("queen", Queen::new, p -> p.mapColor(MapColor.STONE));
-    public static final DeferredBlock<Block> ROOK = BLOCKS.registerBlock("rook", Rook::new, p -> p.mapColor(MapColor.STONE));
+    public static final DeferredBlock<Block> BISHOP = BLOCKS.registerBlock("bishop", Bishop::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> KING = BLOCKS.registerBlock("king", King::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> KNIGHT = BLOCKS.registerBlock("knight", Knight::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> PAWN = BLOCKS.registerBlock("pawn", Pawn::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> QUEEN = BLOCKS.registerBlock("queen", Queen::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> ROOK = BLOCKS.registerBlock("rook", Rook::new, p -> p.mapColor(MapColor.QUARTZ).strength(0.8F, 0.8F).requiresCorrectToolForDrops());
     public static final DeferredItem<BlockItem> BISHOP_ITEM = ITEMS.registerSimpleBlockItem("bishop", BISHOP);
     public static final DeferredItem<BlockItem> KING_ITEM = ITEMS.registerSimpleBlockItem("king", KING);
     public static final DeferredItem<BlockItem> KNIGHT_ITEM = ITEMS.registerSimpleBlockItem("knight", KNIGHT);
@@ -62,11 +62,8 @@ public class Chess {
 //            .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
 
     // Creates a creative tab with the id "chess:example_tab" for the example item, that is placed after the combat tab
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("chess_tab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.chess")) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> PAWN_ITEM.get().getDefaultInstance())
-            .displayItems((parameters, output) -> {
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("chess_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.chess")) //The language key for the title of your CreativeModeTab
+            .withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> PAWN_ITEM.get().getDefaultInstance()).displayItems((parameters, output) -> {
                 output.accept(BISHOP_ITEM.get());
                 output.accept(KING_ITEM.get());
                 output.accept(KNIGHT_ITEM.get());

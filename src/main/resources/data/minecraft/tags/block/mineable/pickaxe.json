@@ -1,0 +1,11 @@
+{
+  "values": [
+    "chess:bishop",
+    "chess:king",
+    "chess:knight",
+    "chess:pawn",
+    "chess:queen",
+    "chess:rook"
+  ],
+  "replace": false
+}
