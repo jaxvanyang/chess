@@ -57,9 +57,18 @@ public class Chess {
     public static final DeferredItem<BlockItem> QUEEN_ITEM = ITEMS.registerSimpleBlockItem("queen", QUEEN);
     public static final DeferredItem<BlockItem> ROOK_ITEM = ITEMS.registerSimpleBlockItem("rook", ROOK);
 
-    // Creates a new food item with the id "chess:example_id", nutrition 1 and saturation 2
-//    public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item", p -> p.food(new FoodProperties.Builder()
-//            .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
+    public static final DeferredBlock<Block> BLACK_BISHOP = BLOCKS.registerBlock("black_bishop", Bishop::new, p -> p.mapColor(MapColor.COLOR_BLACK).strength(1.5F, 6F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> BLACK_KING = BLOCKS.registerBlock("black_king", King::new, p -> p.mapColor(MapColor.COLOR_BLACK).strength(1.5F, 6F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> BLACK_KNIGHT = BLOCKS.registerBlock("black_knight", Knight::new, p -> p.mapColor(MapColor.COLOR_BLACK).strength(1.5F, 6F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> BLACK_PAWN = BLOCKS.registerBlock("black_pawn", Pawn::new, p -> p.mapColor(MapColor.COLOR_BLACK).strength(1.5F, 6F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> BLACK_QUEEN = BLOCKS.registerBlock("black_queen", Queen::new, p -> p.mapColor(MapColor.COLOR_BLACK).strength(1.5F, 6F).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> BLACK_ROOK = BLOCKS.registerBlock("black_rook", Rook::new, p -> p.mapColor(MapColor.COLOR_BLACK).strength(1.5F, 6F).requiresCorrectToolForDrops());
+    public static final DeferredItem<BlockItem> BLACK_BISHOP_ITEM = ITEMS.registerSimpleBlockItem("black_bishop", BLACK_BISHOP);
+    public static final DeferredItem<BlockItem> BLACK_KING_ITEM = ITEMS.registerSimpleBlockItem("black_king", BLACK_KING);
+    public static final DeferredItem<BlockItem> BLACK_KNIGHT_ITEM = ITEMS.registerSimpleBlockItem("black_knight", BLACK_KNIGHT);
+    public static final DeferredItem<BlockItem> BLACK_PAWN_ITEM = ITEMS.registerSimpleBlockItem("black_pawn", BLACK_PAWN);
+    public static final DeferredItem<BlockItem> BLACK_QUEEN_ITEM = ITEMS.registerSimpleBlockItem("black_queen", BLACK_QUEEN);
+    public static final DeferredItem<BlockItem> BLACK_ROOK_ITEM = ITEMS.registerSimpleBlockItem("black_rook", BLACK_ROOK);
 
     // Creates a creative tab with the id "chess:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("chess_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.chess")) //The language key for the title of your CreativeModeTab
@@ -71,6 +80,12 @@ public class Chess {
                 output.accept(ROOK_ITEM.get());
                 output.accept(QUEEN_ITEM.get());
                 output.accept(KING_ITEM.get());
+                output.accept(BLACK_PAWN_ITEM.get());
+                output.accept(BLACK_KNIGHT_ITEM.get());
+                output.accept(BLACK_BISHOP_ITEM.get());
+                output.accept(BLACK_ROOK_ITEM.get());
+                output.accept(BLACK_QUEEN_ITEM.get());
+                output.accept(BLACK_KING_ITEM.get());
             }).build());
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -90,21 +105,11 @@ public class Chess {
         // Note that this is necessary if and only if we want *this* class (Chess) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
-
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
-    }
-
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(PAWN_ITEM);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

@@ -1,0 +1,7 @@
+{
+    "variants": {
+            "": {
+                "model": "chess:block/black_queen"
+            }
+    }
+}

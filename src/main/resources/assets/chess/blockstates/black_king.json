@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "": {
+      "model": "chess:block/black_king"
+    },
+    "facing=south": {
+      "model": "chess:block/black_king",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "chess:block/black_king",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "chess:block/black_king",
+      "y": 90
+    }
+  }
+}

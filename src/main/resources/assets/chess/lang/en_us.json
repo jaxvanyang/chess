@@ -5,5 +5,11 @@
   "block.chess.knight": "White Knight",
   "block.chess.pawn": "White Pawn",
   "block.chess.queen": "White Queen",
-  "block.chess.rook": "White Rook"
+  "block.chess.rook": "White Rook",
+  "block.chess.black_bishop": "Black Bishop",
+  "block.chess.black_king": "Black King",
+  "block.chess.black_knight": "Black Knight",
+  "block.chess.black_pawn": "Black Pawn",
+  "block.chess.black_queen": "Black Queen",
+  "block.chess.black_rook": "Black Rook"
 }
