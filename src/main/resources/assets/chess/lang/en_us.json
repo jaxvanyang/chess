@@ -1,9 +1,9 @@
 {
   "itemGroup.chess": "Chess",
-  "block.chess.bishop": "Bishop",
-  "block.chess.king": "King",
-  "block.chess.knight": "Knight",
-  "block.chess.pawn": "Pawn",
-  "block.chess.queen": "Queen",
-  "block.chess.rook": "Rook"
+  "block.chess.bishop": "White Bishop",
+  "block.chess.king": "White King",
+  "block.chess.knight": "White Knight",
+  "block.chess.pawn": "White Pawn",
+  "block.chess.queen": "White Queen",
+  "block.chess.rook": "White Rook"
 }

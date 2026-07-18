@@ -15,7 +15,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class Bishop extends DirectionBlock {
-    private static final VoxelShape SHAPE = Block.box(3, 0, 3, 13, 22, 13);
+    private static final VoxelShape SHAPE = Block.box(3, 0, 3, 13, 21, 13);
 
     public Bishop(Properties properties) {
         super(properties);

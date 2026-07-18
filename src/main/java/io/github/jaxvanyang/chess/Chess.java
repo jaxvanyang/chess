@@ -64,12 +64,13 @@ public class Chess {
     // Creates a creative tab with the id "chess:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("chess_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.chess")) //The language key for the title of your CreativeModeTab
             .withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> PAWN_ITEM.get().getDefaultInstance()).displayItems((parameters, output) -> {
-                output.accept(BISHOP_ITEM.get());
-                output.accept(KING_ITEM.get());
-                output.accept(KNIGHT_ITEM.get());
+                // sort by piece value
                 output.accept(PAWN_ITEM.get());
-                output.accept(QUEEN_ITEM.get());
+                output.accept(KNIGHT_ITEM.get());
+                output.accept(BISHOP_ITEM.get());
                 output.accept(ROOK_ITEM.get());
+                output.accept(QUEEN_ITEM.get());
+                output.accept(KING_ITEM.get());
             }).build());
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.

@@ -8,7 +8,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class Queen extends GrabBlock {
-    private static final VoxelShape SHAPE = Block.box(3, 0, 3, 13, 23, 13);
+    private static final VoxelShape SHAPE = Block.box(3, 0, 3, 13, 22, 13);
 
     public Queen(Properties properties) {
         super(properties);
