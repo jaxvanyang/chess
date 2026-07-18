@@ -13,29 +13,15 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jspecify.annotations.Nullable;
 
-public class Knight extends Block {
-    public static final EnumProperty<Direction> FACING = BlockStateProperties.FACING;
-
+public class Knight extends DirectionBlock {
     private static final VoxelShape SHAPE = Block.box(3, 0, 3, 13, 19, 13);
 
     public Knight(Properties properties) {
         super(properties);
-
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return SHAPE;
-    }
-
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
-    }
-
-    @Override
-    public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection());
     }
 }

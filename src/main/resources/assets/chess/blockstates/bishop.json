@@ -1,7 +1,19 @@
 {
-    "variants": {
-            "": {
-                "model": "chess:block/bishop"
-            }
+  "variants": {
+    "": {
+      "model": "chess:block/bishop"
+    },
+    "facing=south": {
+      "model": "chess:block/bishop",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "chess:block/bishop",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "chess:block/bishop",
+      "y": 90
     }
+  }
 }
