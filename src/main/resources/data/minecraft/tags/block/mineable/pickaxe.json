@@ -1,11 +1,17 @@
 {
   "values": [
-    "chess:bishop",
-    "chess:king",
-    "chess:knight",
-    "chess:pawn",
-    "chess:queen",
-    "chess:rook"
+    "chess:white_bishop",
+    "chess:white_king",
+    "chess:white_knight",
+    "chess:white_pawn",
+    "chess:white_queen",
+    "chess:white_rook",
+    "chess:black_bishop",
+    "chess:black_king",
+    "chess:black_knight",
+    "chess:black_pawn",
+    "chess:black_queen",
+    "chess:black_rook"
   ],
   "replace": false
 }
