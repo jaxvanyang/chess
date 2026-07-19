@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jspecify.annotations.Nullable;
 
 public class Knight extends DirectionBlock {
     private static final VoxelShape SHAPE = Block.box(3, 0, 3, 13, 19, 13);
