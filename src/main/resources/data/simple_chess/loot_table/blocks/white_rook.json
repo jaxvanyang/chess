@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "simple_chess:rook"
+          "name": "simple_chess:white_rook"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "simple_chess:blocks/rook"
+  "random_sequence": "simple_chess:blocks/white_rook"
 }
