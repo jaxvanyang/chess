@@ -1,17 +1,17 @@
 {
   "values": [
-    "chess:white_bishop",
-    "chess:white_king",
-    "chess:white_knight",
-    "chess:white_pawn",
-    "chess:white_queen",
-    "chess:white_rook",
-    "chess:black_bishop",
-    "chess:black_king",
-    "chess:black_knight",
-    "chess:black_pawn",
-    "chess:black_queen",
-    "chess:black_rook"
+    "simple_chess:white_bishop",
+    "simple_chess:white_king",
+    "simple_chess:white_knight",
+    "simple_chess:white_pawn",
+    "simple_chess:white_queen",
+    "simple_chess:white_rook",
+    "simple_chess:black_bishop",
+    "simple_chess:black_king",
+    "simple_chess:black_knight",
+    "simple_chess:black_pawn",
+    "simple_chess:black_queen",
+    "simple_chess:black_rook"
   ],
   "replace": false
 }

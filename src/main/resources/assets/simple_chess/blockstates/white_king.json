@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "simple_chess:block/white_king"
+    },
+    "facing=south": {
+      "model": "simple_chess:block/white_king",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "simple_chess:block/white_king",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "simple_chess:block/white_king",
+      "y": 90
+    }
+  }
+}
