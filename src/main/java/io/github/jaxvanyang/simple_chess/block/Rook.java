@@ -1,0 +1,21 @@
+package io.github.jaxvanyang.simple_chess.block;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
+public class Rook extends GrabBlock {
+    private static final VoxelShape SHAPE = Block.box(3, 0, 3, 13, 18, 13);
+
+    public Rook(Properties properties) {
+        super(properties);
+    }
+
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return SHAPE;
+    }
+}

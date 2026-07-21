@@ -1,0 +1,11 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "simple_chess:block/white_bishop",
+	"textures": {
+		"1": "simple_chess:block/black_piece_bottom",
+		"2": "simple_chess:block/black_piece_side",
+		"3": "simple_chess:block/black_piece_top",
+		"particle": "simple_chess:block/black_piece_bottom"
+	}
+}

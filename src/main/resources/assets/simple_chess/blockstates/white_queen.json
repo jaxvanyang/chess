@@ -1,0 +1,7 @@
+{
+    "variants": {
+            "": {
+                "model": "simple_chess:block/white_queen"
+            }
+    }
+}
