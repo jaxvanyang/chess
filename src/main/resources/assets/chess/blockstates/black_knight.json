@@ -1,6 +1,6 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "chess:block/black_knight"
     },
     "facing=south": {
