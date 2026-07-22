@@ -1,0 +1,15 @@
+{
+  "itemGroup.simple_chess": "国际象棋",
+  "block.simple_chess.white_bishop": "白主教",
+  "block.simple_chess.white_king": "白王",
+  "block.simple_chess.white_knight": "白骑士",
+  "block.simple_chess.white_pawn": "白兵",
+  "block.simple_chess.white_queen": "白后",
+  "block.simple_chess.white_rook": "白车",
+  "block.simple_chess.black_bishop": "黑主教",
+  "block.simple_chess.black_king": "黑王",
+  "block.simple_chess.black_knight": "黑骑士",
+  "block.simple_chess.black_pawn": "黑兵",
+  "block.simple_chess.black_queen": "黑后",
+  "block.simple_chess.black_rook": "黑车"
+}
