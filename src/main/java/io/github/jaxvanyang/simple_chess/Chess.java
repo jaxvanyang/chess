@@ -56,7 +56,8 @@ public class Chess {
     public static final DeferredItem<BlockItem> BLACK_PAWN_ITEM = ITEMS.registerSimpleBlockItem("black_pawn", BLACK_PAWN);
     public static final DeferredItem<BlockItem> BLACK_QUEEN_ITEM = ITEMS.registerSimpleBlockItem("black_queen", BLACK_QUEEN);
     public static final DeferredItem<BlockItem> BLACK_ROOK_ITEM = ITEMS.registerSimpleBlockItem("black_rook", BLACK_ROOK);
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("chess_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.chess")) //The language key for the title of your CreativeModeTab
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register(
+            "chess_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.simple_chess"))
             .withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> WHITE_PAWN_ITEM.get().getDefaultInstance()).displayItems((parameters, output) -> {
                 // sort by piece value
                 output.accept(WHITE_PAWN_ITEM.get());
